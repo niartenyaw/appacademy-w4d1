@@ -30,12 +30,12 @@ class UsersController < ApplicationController
     user = User.find(params[:id])
     user.destroy
 
-    render json: User.all
+    redirect_to users_url, status: 303
   end
 
   private
 
   def user_params
-    params.require(:user).permit(:email, :name)
+    params.require(:user).permit(:username)
   end
 end

@@ -6,6 +6,17 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-user1 = User.create(email: 'seanperfecto@gmail.com', name: 'Sean Perfecto')
-user2 = User.create(email: 'asdfjas@adskfjl.com', name: 'Aaron Wayne')
-user3 = User.create(email: 'jibberish@hotmail.com', name: 'Jibber Ish')
+
+user1 = User.create(username: 'seanperfect')
+user2 = User.create(username: 'aaron')
+user3 = User.create(username: 'jibberish')
+user4 = User.create(username: 'lameartist1234')
+
+artwork1 = Artwork.create(title: 'mona lisa', image_url: 'thamona.com', artist_id: 1)
+artwork2 = Artwork.create(title: 'starry night', image_url: 'vangohg.com', artist_id: 2)
+artwork3 = Artwork.create(title: 'Sistine Chapel', image_url: 'michalangelo.com', artist_id: 3)
+
+awshare1 = ArtworkShare.create(viewer_id: 1, artwork_id: 2)
+awshare2 = ArtworkShare.create(viewer_id: 2, artwork_id: 1)
+awshare3 = ArtworkShare.create(viewer_id: 3, artwork_id: 1)
+awshare4 = ArtworkShare.create(viewer_id: 4, artwork_id: 2)
