@@ -26,4 +26,10 @@ class Artwork < ActiveRecord::Base
   has_many :commenters,
     through: :comments,
     source: :commenter
+
+  has_many :likes, as: :likeable
+
+  has_many :users_whom_like,
+    through: :likes,
+    source: :user
 end

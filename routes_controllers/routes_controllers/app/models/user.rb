@@ -26,4 +26,9 @@ class User < ActiveRecord::Base
   has_many :artworks_with_comments,
     through: :comments,
     source: :artwork
+
+  has_many :likes,
+    primary_key: :id,
+    foreign_key: :user_id,
+    class_name: :Like
 end
