@@ -20,3 +20,9 @@ awshare1 = ArtworkShare.create(viewer_id: 1, artwork_id: 2)
 awshare2 = ArtworkShare.create(viewer_id: 2, artwork_id: 1)
 awshare3 = ArtworkShare.create(viewer_id: 3, artwork_id: 1)
 awshare4 = ArtworkShare.create(viewer_id: 4, artwork_id: 2)
+
+
+c1 = Comment.create(user_id: 1, artwork_id: 2, body:"This some artowrk")
+c2 = Comment.create(user_id: 2, artwork_id: 3, body:"This too")
+c3 = Comment.create(user_id: 3, artwork_id: 1, body:"Yup")
+c4 = Comment.create(user_id: 2, artwork_id: 1, body:"beautifil")

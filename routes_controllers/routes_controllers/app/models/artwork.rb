@@ -8,6 +8,7 @@ class Artwork < ActiveRecord::Base
     class_name: 'User'
 
   has_many :artwork_shares,
+    dependent: :destroy,
     primary_key: :id,
     foreign_key: :artwork_id,
     class_name: 'ArtworkShare'
@@ -15,4 +16,14 @@ class Artwork < ActiveRecord::Base
   has_many :shared_viewers,
     through: :artwork_shares,
     source: :viewer
+
+  has_many :comments,
+    dependent: :destroy,
+    primary_key: :id,
+    foreign_key: :artwork_id,
+    class_name: :Comment
+
+  has_many :commenters,
+    through: :comments,
+    source: :commenter
 end
